@@ -1,0 +1,13 @@
+{
+    "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    }
+},
+"[typescriptreact]": {
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    }
+}
+}

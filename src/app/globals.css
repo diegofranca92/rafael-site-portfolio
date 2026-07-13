@@ -1,6 +1,7 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import 'tailwindcss';
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -17,10 +18,36 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+@theme inline {
+  --bg-primary: #f4ebcc;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* background: var(--background);
+  color: var(--foreground); */
+
+  font-family: 'Unbounded', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background: #f4ebcc;
+}
+
+h2,
+h3 {
+  color: #1348b4;
+}
+
+.bg-primary {
+  background-color: #f4ebcc;
+}
+
+#header {
+  background-image: url(/public/assets/topo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #e1bb3f;
 }
