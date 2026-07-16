@@ -1,6 +1,7 @@
-import { Services } from "@/components/Services";
-import { Timeline } from "@/components/Timeline";
+
 import Image from "next/image";
+import { Services } from "../components/Services";
+import { Timeline } from "../components/Timeline";
 
 export default function Home() {
   return (
@@ -92,7 +93,7 @@ export default function Home() {
         </p>
       </section>
       <section
-        id='newsletter'
+        id='newsletter' 
         className='flex flex-col items-center justify-center gap-4 mt-8 h-dvh'>
         <h2 className='text-2xl font-bold'>Newsletter</h2>
         <p className='text-lg'>
