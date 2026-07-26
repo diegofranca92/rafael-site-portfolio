@@ -8,7 +8,7 @@ export default function Home() {
       <div>
         <section
         id='header'
-        className='flex flex-col md:flex-row items-center justify-start gap-4 p-4 md:p-8 h-dvh'>
+        className='flex flex-col md:flex-row items-center justify-start gap-4 p-4 md:p-8 min-h-dvh text-white'>
         <div className='md:w-[50%]'>
           <h1 className='text-6xl font-bold leading-[1.2]'>
             Educação, gestão inclusiva e estratégia antirracista
@@ -29,13 +29,13 @@ export default function Home() {
       </section>
       <section
         id='servicos'
-        className='flex flex-col items-center justify-center gap-4 min-h-dvh h-dvh px-8 py-20'>
+        className='flex flex-col items-center justify-center gap-4 min-h-dvh px-8 py-20'>
         <h2 className='text-2xl font-bold'>Meus Serviços</h2>
         <Services />
       </section>
       <section
         id='sobre'
-        className='flex flex-col items-center justify-center gap-4 min-h-dvh h-dvh px-8 py-20 mt-20'>
+        className='flex flex-col items-center justify-center gap-4 min-h-dvh px-8 py-20 mt-20'>
         <h2 className='text-2xl font-bold'>Sobre Mim</h2>
         <div className="flex flex-col md:flex-row gap-4 justify-between">
           <div className="p-8 md:w-[50%] flex flex-col gap-4">
@@ -67,7 +67,7 @@ export default function Home() {
             </p>
             <a href="https://wa.me/5521976994685" target="_blank" className="p-4 border-amber-500 border-2 rounded-full hover:bg-amber-50 self-start">Vamos Conversar</a>
           </div>
-          <div className="p-8 md:w-[50%]">
+          <div className="p-8 md:w-[50%] relative">
             <h3>COMO CHEGUEI ATÉ AQUI</h3>
             <Timeline />
           </div>
@@ -78,7 +78,7 @@ export default function Home() {
       </section>
       <section
         id='publicacoes'
-        className='flex flex-col items-center justify-center gap-4 mt-8 h-dvh'>
+        className='flex flex-col items-center justify-center gap-4 mt-8 min-h-dvh'>
         <h2 className='text-2xl font-bold'>Publicações</h2>
         <p className='text-lg'>
           Aqui você encontrará minhas publicações mais recentes.
@@ -86,7 +86,7 @@ export default function Home() {
       </section>
       <section
         id='cursos'
-        className='flex flex-col items-center justify-center gap-4 mt-8 h-dvh'>
+        className='flex flex-col items-center justify-center gap-4 mt-8 min-h-dvh'>
         <h2 className='text-2xl font-bold'>Cursos</h2>
         <p className='text-lg'>
           Aqui você encontrará informações sobre os cursos que ofereço.
@@ -94,7 +94,7 @@ export default function Home() {
       </section>
       <section
         id='newsletter' 
-        className='flex flex-col items-center justify-center gap-4 mt-8 h-dvh'>
+        className='flex flex-col items-center justify-center gap-4 mt-8 min-h-dvh'>
         <h2 className='text-2xl font-bold'>Newsletter</h2>
         <p className='text-lg'>
           Inscreva-se na minha newsletter para receber atualizações sobre meus
@@ -103,7 +103,7 @@ export default function Home() {
       </section>
       <section
         id='contato'
-        className='flex flex-col items-center justify-center gap-4 mt-8 h-dvh'>
+        className='flex flex-col items-center justify-center gap-4 mt-8 min-h-dvh'>
         <h2 className='text-2xl font-bold'>Contato</h2>
         <p className='text-lg'>
           Entre em contato comigo para mais informações sobre meus serviços.

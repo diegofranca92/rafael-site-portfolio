@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 @import 'tailwindcss';
+@plugin "daisyui";
 
 /* :root {
   --background: #ffffff;
@@ -32,6 +33,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   background: #f4ebcc;
+  color: #171717;
 }
 
 h2,
@@ -44,7 +46,7 @@ h3 {
 }
 
 #header {
-  background-image: url(/public/assets/topo.jpg);
+  background-image: url(/assets/topo.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
