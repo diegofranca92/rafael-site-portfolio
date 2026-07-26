@@ -60,8 +60,6 @@ export function Timeline() {
         <li key={`${entry.year}-${entry.title}`}>
           {index > 0 && <hr />}
 
-          <div className="timeline-start font-bold">{entry.year}</div>
-
           <div className="timeline-middle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -77,8 +75,8 @@ export function Timeline() {
             </svg>
           </div>
 
-          <div className="timeline-end timeline-box min-w-112.5 text-white">
-            <h3 className="font-bold text-lg">{entry.title}</h3>
+          <div className="timeline-end timeline-box text-white bg-primary">
+            <h3 className="font-bold text-lg"><div className="badge badge-dash badge-primary">{entry.year} - </div>{entry.title}</h3>
             <p className="mt-2 text-sm leading-7">{entry.text}</p>
           </div>
 

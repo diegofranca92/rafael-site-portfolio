@@ -4,8 +4,25 @@ import { Services } from "../components/Services";
 import { Timeline } from "../components/Timeline";
 
 export default function Home() {
+
+  const publicacoes = Array.from({ length: 6 }, (_, i) => ({
+  id: i + 1,
+  src: `/assets/publicacoes/${i + 1}.png`,
+}));
+
   return (
       <div>
+        {/* Colocar no Carregamento da Pagina */}
+        {/* <span className="text-rotate text-7xl">
+          <span className="justify-items-center">
+            <span>DESIGN</span>
+            <span>DEVELOP</span>
+            <span>DEPLOY</span>
+            <span>SCALE</span>
+            <span>MAINTAIN</span>
+            <span>REPEAT</span>
+          </span>
+        </span> */}
         <section
         id='header'
         className='flex flex-col md:flex-row items-center justify-start gap-4 p-4 md:p-8 min-h-dvh text-white'>
@@ -38,7 +55,7 @@ export default function Home() {
         className='flex flex-col items-center justify-center gap-4 min-h-dvh px-8 py-20 mt-20'>
         <h2 className='text-2xl font-bold'>Sobre Mim</h2>
         <div className="flex flex-col md:flex-row gap-4 justify-between">
-          <div className="p-8 md:w-[50%] flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             <h3>
               Quem é <span className="text-blue-700">RAFAEL SILVA</span>
             </h3>
@@ -67,7 +84,7 @@ export default function Home() {
             </p>
             <a href="https://wa.me/5521976994685" target="_blank" className="p-4 border-amber-500 border-2 rounded-full hover:bg-amber-50 self-start">Vamos Conversar</a>
           </div>
-          <div className="p-8 md:w-[50%] relative">
+          <div className="relative">
             <h3>COMO CHEGUEI ATÉ AQUI</h3>
             <Timeline />
           </div>
@@ -83,6 +100,18 @@ export default function Home() {
         <p className='text-lg'>
           Aqui você encontrará minhas publicações mais recentes.
         </p>
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {publicacoes.map((item) => (
+          <Image
+            key={item.id}
+            src={item.src}
+            alt={`Publicação ${item.id}`}
+            width={500}
+            height={300}
+            className="rounded-2xl"
+          />
+        ))}
+      </div>
       </section>
       <section
         id='cursos'
