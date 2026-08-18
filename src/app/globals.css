@@ -23,6 +23,11 @@
 
 @theme inline {
   --bg-primary: #f4ebcc;
+  --yellow: #f5c26f;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -32,17 +37,12 @@ body {
   font-family: 'Unbounded', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  background: #f4ebcc;
+  background: var(--bg-primary);
   color: #171717;
 }
 
-h2,
-h3 {
-  color: #1348b4;
-}
-
 .bg-primary {
-  background-color: #f4ebcc;
+  background-color: var(--bg-primary);
 }
 
 #header {
