@@ -45,14 +45,14 @@ export function NavBar() {
         <nav className='navbar flex justify-between items-center gap-4 px-4 bg-[#1348b4] w-full min-h-[72px]'>
 
           {/* Identidade Visual (Logo + Textos) */}
-          <div className="flex gap-4 items-center py-2">
-            <Image src='/assets/logo.svg' alt='Logomarca de Rafael Silva' width={200} height={40} priority />
-            <span className="border-r-3 border-white h-14 hidden sm:block"></span>
-            <span className="text-rotate text-2xl text-white hidden sm:block">
-              <span className="flex flex-col text-sm font-semibold tracking-wide">
+          <div className="flex gap-4 justify-items-center items-center py-2">
+            <Image src='/assets/logo.svg' alt='Logomarca de Rafael Silva' width={200} height={40} />
+            <span className="border-r-3 border-white py-2 h-14"></span>
+            <span className="text-rotate text-2xl text-white">
+              <span>
                 <span>Educador</span>
                 <span>Palestrante</span>
-                <span>Antirracista</span>
+                <span>Antiracista</span>
               </span>
             </span>
           </div>
