@@ -14,7 +14,7 @@ export function Services() {
         <h2 className="text-3xl font-bold">PARA SUA <br /><span className="text-blue-700">ESCOLA</span></h2>
       </div>
 
-      <div className="flex gap-8 mt-8">
+      <div className="flex flex-wrap gap-8 mt-8">
         <div className="flex flex-wrap rounded-lg p-8 bg-amber-100 gap-4">
           <h3 className="font-bold uppercase">Consultoria pedagógica</h3>
           <p>

@@ -12,7 +12,7 @@ export default function Carousel() {
     <div className="carousel w-full">
       {publicacoes.map((item) => (
         <div id={`slide${item.id}`} className="carousel-item relative w-full">
-          <div className="flex gap-4 items-center justify-center m-auto">
+          <div className="flex gap-4 flex-wrap items-center justify-center m-auto">
             <Image
               key={item.id}
               src={item.src}

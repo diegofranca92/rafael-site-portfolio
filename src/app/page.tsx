@@ -1,6 +1,7 @@
 
 import Image from "next/image";
 import Carousel from "../components/Carousel";
+import { Contact } from "../components/Contact";
 import { Newsletter } from "../components/Newsletter";
 import { Services } from "../components/Services";
 import { Timeline } from "../components/Timeline";
@@ -52,11 +53,10 @@ export default function Home() {
         <section
           id='sobre'
           className='flex flex-col items-center justify-center gap-4 min-h-dvh px-8 py-20 mt-20'>
-          <h2 className='text-2xl font-bold'>Sobre Mim</h2>
           <div className="flex flex-col md:flex-row gap-4 justify-between">
             <div className="flex flex-col gap-4">
-              <h3>
-                Quem é <span className="text-blue-700">RAFAEL SILVA</span>
+              <h3 className="text-2xl uppercase">
+                Quem é <br /><span className="text-blue-700">RAFAEL SILVA</span>
               </h3>
               <Image src='/assets/perfil.jpg' alt='Seguir no Linkedin' width={500} height={300} className="rounded-2xl" />
               <p className="mt-8">
@@ -83,8 +83,8 @@ export default function Home() {
               </p>
               <a href="https://wa.me/5521976994685" target="_blank" className="p-4 border-amber-500 border-2 rounded-full hover:bg-amber-600 hover:text-white transition-colors self-start">Vamos Conversar</a>
             </div>
-            <div className="relative">
-              <h3>COMO CHEGUEI ATÉ AQUI</h3>
+            <div className="relative text-2xl">
+              <h3>COMO CHEGUEI <br /><span className="text-blue-700">ATÉ AQUI</span></h3>
               <Timeline />
             </div>
           </div>
@@ -121,12 +121,38 @@ export default function Home() {
         </section>
         <section
           id='contato'
-          className='flex flex-col items-center justify-center gap-4 mt-8 min-h-dvh'>
+          className='relative flex flex-col items-center justify-center gap-4 mt-8 min-h-dvh w-full bg-blue-700 text-white'>
+          <div className="flex absolute top-0">
+            <Image src='/assets/grafismos/faixa1.png'
+              alt='Seguir no Linkedin'
+              width={500}
+              height={300}
+            />
+            <Image src='/assets/grafismos/faixa2.png'
+              alt='Seguir no Linkedin'
+              width={500}
+              height={300}
+              className="hidden md:visible"
+            />
+          </div>
+          <div className="flex absolute bottom-0">
+            <Image src='/assets/grafismos/faixa1.png'
+              alt='Seguir no Linkedin'
+              width={500}
+              height={300}
+            />
+            <Image src='/assets/grafismos/faixa2.png'
+              alt='Seguir no Linkedin'
+              width={500}
+              height={300}
+              className="hidden md:visible"
+            />
+          </div>
           <h2 className='text-2xl font-bold'>Contato</h2>
           <p className='text-lg'>
             Entre em contato comigo para mais informações sobre meus serviços.
           </p>
-          <Image src='/assets/footer.jpg' alt='Seguir no Linkedin' width={500} height={300} className="w-dvw h-125!" />
+          <Contact />
         </section>
       </main>
     </div>

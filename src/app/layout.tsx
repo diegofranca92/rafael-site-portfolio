@@ -24,8 +24,8 @@ export default function RootLayout({
     <html
       lang='en'
       data-theme="light"
-      className={`${unbounded.variable} ${unbounded.variable} h-full antialiased`}>
-      <body className='min-h-full flex flex-col'>
+      className={`${unbounded.variable} ${unbounded.variable} h-full antialiased relative`}>
+      <body className='min-h-full flex flex-col relative'>
         <NavBar />
         {children}
         <LinkedinCard />
