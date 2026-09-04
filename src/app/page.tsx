@@ -47,7 +47,6 @@ export default function Home() {
         <section
           id='servicos'
           className='flex flex-col items-center justify-center gap-4 min-h-dvh px-8 py-20'>
-          <h2 className='text-2xl font-bold'>Meus Serviços</h2>
           <Services />
         </section>
         <section

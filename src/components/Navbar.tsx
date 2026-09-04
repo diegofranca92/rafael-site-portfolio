@@ -52,7 +52,7 @@ export function NavBar() {
               <span>
                 <span>Educador</span>
                 <span>Palestrante</span>
-                <span>Antiracista</span>
+                <span>Antirracista</span>
               </span>
             </span>
           </div>
