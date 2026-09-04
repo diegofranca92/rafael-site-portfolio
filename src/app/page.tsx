@@ -121,19 +121,6 @@ export default function Home() {
         <section
           id='contato'
           className='relative flex flex-col items-center justify-center gap-4 mt-8 min-h-dvh w-full bg-blue-700 text-white'>
-          <div className="flex absolute top-0">
-            <Image src='/assets/grafismos/faixa1.png'
-              alt='Seguir no Linkedin'
-              width={500}
-              height={300}
-            />
-            <Image src='/assets/grafismos/faixa2.png'
-              alt='Seguir no Linkedin'
-              width={500}
-              height={300}
-              className="hidden md:visible"
-            />
-          </div>
           <div className="flex absolute bottom-0">
             <Image src='/assets/grafismos/faixa1.png'
               alt='Seguir no Linkedin'
@@ -144,14 +131,42 @@ export default function Home() {
               alt='Seguir no Linkedin'
               width={500}
               height={300}
-              className="hidden md:visible"
+              className="hidden lg:block"
+            />
+            <Image src='/assets/grafismos/faixa1.png'
+              alt='Seguir no Linkedin'
+              width={500}
+              height={300}
+              className="hidden lg:block"
+            />
+            <Image src='/assets/grafismos/faixa2.png'
+              alt='Seguir no Linkedin'
+              width={500}
+              height={300}
+              className="hidden lg:block"
+            />
+            <Image src='/assets/grafismos/faixa1.png'
+              alt='Seguir no Linkedin'
+              width={500}
+              height={300}
+              className="hidden lg:block"
+            />
+            <Image src='/assets/grafismos/faixa2.png'
+              alt='Seguir no Linkedin'
+              width={500}
+              height={300}
+              className="hidden lg:block"
             />
           </div>
           <h2 className='text-2xl font-bold'>Contato</h2>
           <p className='text-lg'>
             Entre em contato comigo para mais informações sobre meus serviços.
           </p>
-          <Contact />
+          <div className="flex md:gap-100 flex-wrap md:flex-nowrap mt-30">
+            <Image src='/assets/logo.svg' alt='Logomarca de Rafael Silva' width={600} height={40} />
+            <Contact />
+          </div>
+
         </section>
       </main>
     </div>

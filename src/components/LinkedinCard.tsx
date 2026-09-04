@@ -59,7 +59,7 @@ export function LinkedinCard() {
       {/* Container de Texto */}
       <div className={`transition-all duration-500 ease-in-out flex flex-col justify-center ${isMinimized ? 'opacity-0 scale-95 pointer-events-none w-0' : 'opacity-100 scale-100 w-45'}`}>
         <h2 className='text-2xl font-bold whitespace-nowrap text-blue-700'>Rafael Silva</h2>
-        <p className='whitespace-nowrap'>Professor/Palestrante</p>
+        <p className='whitespace-nowrap text-black'>Professor/Palestrante</p>
         <a href="https://br.linkedin.com/in/edurafaelsilva" className='hover:scale-105 transition-all flex gap-4 items-center bg-[#191919] rounded-full p-2 px-6 mt-4 text-white hover:underline mx-auto whitespace-nowrap'>
           <span>Seguir</span>
           <span className='rounded-full overflow-hidden'>
