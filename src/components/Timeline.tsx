@@ -1,7 +1,12 @@
 'use client'
 
+import { useRef } from 'react'
+
 export function Timeline() {
-  const entries = [
+  // Referência para controlar a abertura/fechamento do modal do DaisyUI
+  const modalRef = useRef<HTMLDialogElement>(null)
+
+  const rawEntries = [
     {
       year: '2005',
       title: 'Primeiros passos',
@@ -54,43 +59,178 @@ export function Timeline() {
     },
   ]
 
+  // Inverte o array para que os registros mais atuais fiquem no topo
+  const entries = [...rawEntries].reverse()
+
+  // Apenas os 5 primeiros aparecem diretamente na timeline
+  const visibleEntries = entries.slice(0, 5)
+
+  // Usado apenas para verificar se o botão "Mostrar Mais" deve aparecer
+  const hiddenEntries = entries.slice(5)
+
   return (
-    <ul className="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact mt-8">
-      {entries.map((entry, index) => {
-        // Verifica se o index é par para alternar os lados
-        const isEven = index % 2 === 0;
+    <div className="w-full flex flex-col items-center">
 
-        return (
-          <li key={`${entry.year}-${entry.title}`} className=" text-blue-700">
-            {index > 0 && <hr />}
+      {/* Timeline principal - Exibe apenas os 5 registros mais recentes */}
+      <ul className="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact mt-8 w-full">
+        {visibleEntries.map((entry, index) => {
+          const isEven = index % 2 === 0
 
-            <div className="timeline-middle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
-              </svg>
-            </div>
+          return (
+            <li
+              key={`${entry.year} -${entry.title} `}
+              className="text-blue-700"
+            >
+              {index > 0 && <hr className="bg-black" />}
 
-            {/* Se for par, renderiza no START, se for ímpar deixa vazio */}
-            {isEven && (
-              <div className="timeline-start timeline-box bg-amber-50 p-6">
-                <h3 className="font-bold text-lg"><div className="badge badge-dash">{entry.year}</div> - <span className="uppercase">{entry.title}</span></h3>
-                <p className="mt-2 text-sm leading-7 text-black">{entry.text}</p>
+              <div className="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="h-5 w-5"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clipRule="evenodd"
+                  />
+                </svg>
               </div>
-            )}
 
-            {/* Se for ímpar, renderiza no END, se for par deixa vazio */}
-            {!isEven && (
-              <div className="timeline-end timeline-box bg-amber-50 p-6">
-                <h3 className="font-bold text-lg"><div className="badge badge-dash">{entry.year}</div> - <span className="uppercase">{entry.title}</span></h3>
-                <p className="mt-2 text-sm leading-7 text-black">{entry.text}</p>
-              </div>
-            )}
+              {isEven && (
+                <div className="timeline-start timeline-box bg-amber-50 p-6">
+                  <h3 className="font-bold text-lg">
+                    <div className="badge badge-dash">
+                      {entry.year}
+                    </div>{' '}
+                    -{' '}
+                    <span className="uppercase">
+                      {entry.title}
+                    </span>
+                  </h3>
 
-            {index < entries.length - 1 && <hr className="bg-black" />}
-          </li>
-        );
-      })}
+                  <p className="mt-2 text-sm leading-7 text-black">
+                    {entry.text}
+                  </p>
+                </div>
+              )}
 
-    </ul>
+              {!isEven && (
+                <div className="timeline-end timeline-box bg-amber-50 p-6">
+                  <h3 className="font-bold text-lg">
+                    <div className="badge badge-dash">
+                      {entry.year}
+                    </div>{' '}
+                    -{' '}
+                    <span className="uppercase">
+                      {entry.title}
+                    </span>
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-7 text-black">
+                    {entry.text}
+                  </p>
+                </div>
+              )}
+
+              {index < visibleEntries.length - 1 && (
+                <hr className="bg-black" />
+              )}
+            </li>
+          )
+        })}
+      </ul>
+
+      {/* Botão para abrir o histórico completo */}
+      {hiddenEntries.length > 0 && (
+        <button
+          className="p-4 border-amber-500 hover:cursor-pointer border-2 rounded-full hover:bg-amber-600 hover:text-white transition-colors mt-8"
+          onClick={() => modalRef.current?.showModal()}
+        >
+          Mostrar Mais Histórico
+        </button>
+      )}
+
+      {/* Modal com TODOS os registros */}
+      <dialog
+        ref={modalRef}
+        className="modal modal-bottom sm:modal-middle"
+      >
+        <div className="modal-box bg-slate-50 max-w-2xl">
+
+          <h3 className="font-bold text-2xl text-blue-900 mb-6 border-b pb-2">
+            Histórico Completo
+          </h3>
+
+          {/* Scroll interno do modal */}
+          <div className="max-h-[60vh] overflow-y-auto pr-2">
+            <ul className="timeline timeline-vertical timeline-compact w-full">
+
+              {entries.map((entry, index) => (
+                <li
+                  key={`modal - ${entry.year} -${entry.title} `}
+                  className="text-blue-700"
+                >
+                  {index > 0 && (
+                    <hr className="bg-gray-300" />
+                  )}
+
+                  <div className="timeline-middle">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="h-5 w-5"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l-2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+
+                  <div className="timeline-end timeline-box bg-amber-50 p-4 mb-4 w-full">
+                    <h4 className="font-bold text-base">
+                      <div className="badge badge-dash mr-2">
+                        {entry.year}
+                      </div>{' '}
+                      -{' '}
+                      <span className="uppercase text-sm">
+                        {entry.title}
+                      </span>
+                    </h4>
+
+                    <p className="mt-2 text-xs leading-6 text-black">
+                      {entry.text}
+                    </p>
+                  </div>
+
+                  {index < entries.length - 1 && (
+                    <hr className="bg-gray-300" />
+                  )}
+                </li>
+              ))}
+
+            </ul>
+          </div>
+
+          {/* Botão de fechar */}
+          <div className="modal-action">
+            <form method="dialog">
+              <button className="btn">
+                Fechar
+              </button>
+            </form>
+          </div>
+        </div>
+
+        {/* Fecha clicando no fundo do modal */}
+        <form method="dialog" className="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
+    </div>
   )
 }

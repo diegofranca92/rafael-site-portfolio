@@ -2,7 +2,9 @@
 import Image from "next/image";
 import Carousel from "../components/Carousel";
 import { Contact } from "../components/Contact";
+import { Courses } from "../components/Courses";
 import { Newsletter } from "../components/Newsletter";
+import { PartnersCarousel } from "../components/PartnersCarousel";
 import { Services } from "../components/Services";
 import { Timeline } from "../components/Timeline";
 
@@ -37,13 +39,13 @@ export default function Home() {
           </p>
         </div>
       </section>
+      <section className='p-4'>
+        <h2 className='text-center text-2xl font-bold mt-4'>
+          Instituições e Secretarias que confiaram em Rafael Silva
+        </h2>
+        <PartnersCarousel />
+      </section>
       <main className='flex flex-col flex-1 items-center justify-center gap-8'>
-        <section className='p-4'>
-          <h2 className='text-2xl font-bold'>
-            Instituições e Secretarias que confiaram em Rafael Silva
-          </h2>
-          <div className='p-4 border-gray-900 border-2'></div>
-        </section>
         <section
           id='servicos'
           className='flex flex-col items-center justify-center gap-4 min-h-dvh px-8 py-20'>
@@ -87,9 +89,6 @@ export default function Home() {
               <Timeline />
             </div>
           </div>
-          <p className='text-lg'>
-            Ofereço serviços de desenvolvimento web, consultoria e treinamento.
-          </p>
         </section>
         <section
           id='publicacoes'
@@ -107,6 +106,7 @@ export default function Home() {
           <p className='text-lg'>
             Aqui você encontrará informações sobre os cursos que ofereço.
           </p>
+          <Courses />
         </section>
         <section
           id='newsletter'
