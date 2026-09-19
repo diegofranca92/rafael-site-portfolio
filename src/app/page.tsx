@@ -2,7 +2,9 @@
 import Image from "next/image";
 import Carousel from "../components/Carousel";
 import { Contact } from "../components/Contact";
+import { Courses } from "../components/Courses";
 import { Newsletter } from "../components/Newsletter";
+import { PartnersCarousel } from "../components/PartnersCarousel";
 import { Services } from "../components/Services";
 import { Timeline } from "../components/Timeline";
 
@@ -37,17 +39,16 @@ export default function Home() {
           </p>
         </div>
       </section>
+      <section className='p-4'>
+        <h2 className='text-center text-2xl font-bold mt-4'>
+          Instituições e Secretarias que confiaram em Rafael Silva
+        </h2>
+        <PartnersCarousel />
+      </section>
       <main className='flex flex-col flex-1 items-center justify-center gap-8'>
-        <section className='p-4'>
-          <h2 className='text-2xl font-bold'>
-            Instituições e Secretarias que confiaram em Rafael Silva
-          </h2>
-          <div className='p-4 border-gray-900 border-2'></div>
-        </section>
         <section
           id='servicos'
           className='flex flex-col items-center justify-center gap-4 min-h-dvh px-8 py-20'>
-          <h2 className='text-2xl font-bold'>Meus Serviços</h2>
           <Services />
         </section>
         <section
@@ -88,9 +89,6 @@ export default function Home() {
               <Timeline />
             </div>
           </div>
-          <p className='text-lg'>
-            Ofereço serviços de desenvolvimento web, consultoria e treinamento.
-          </p>
         </section>
         <section
           id='publicacoes'
@@ -108,6 +106,7 @@ export default function Home() {
           <p className='text-lg'>
             Aqui você encontrará informações sobre os cursos que ofereço.
           </p>
+          <Courses />
         </section>
         <section
           id='newsletter'
@@ -122,19 +121,6 @@ export default function Home() {
         <section
           id='contato'
           className='relative flex flex-col items-center justify-center gap-4 mt-8 min-h-dvh w-full bg-blue-700 text-white'>
-          <div className="flex absolute top-0">
-            <Image src='/assets/grafismos/faixa1.png'
-              alt='Seguir no Linkedin'
-              width={500}
-              height={300}
-            />
-            <Image src='/assets/grafismos/faixa2.png'
-              alt='Seguir no Linkedin'
-              width={500}
-              height={300}
-              className="hidden md:visible"
-            />
-          </div>
           <div className="flex absolute bottom-0">
             <Image src='/assets/grafismos/faixa1.png'
               alt='Seguir no Linkedin'
@@ -145,14 +131,42 @@ export default function Home() {
               alt='Seguir no Linkedin'
               width={500}
               height={300}
-              className="hidden md:visible"
+              className="hidden lg:block"
+            />
+            <Image src='/assets/grafismos/faixa1.png'
+              alt='Seguir no Linkedin'
+              width={500}
+              height={300}
+              className="hidden lg:block"
+            />
+            <Image src='/assets/grafismos/faixa2.png'
+              alt='Seguir no Linkedin'
+              width={500}
+              height={300}
+              className="hidden lg:block"
+            />
+            <Image src='/assets/grafismos/faixa1.png'
+              alt='Seguir no Linkedin'
+              width={500}
+              height={300}
+              className="hidden lg:block"
+            />
+            <Image src='/assets/grafismos/faixa2.png'
+              alt='Seguir no Linkedin'
+              width={500}
+              height={300}
+              className="hidden lg:block"
             />
           </div>
           <h2 className='text-2xl font-bold'>Contato</h2>
           <p className='text-lg'>
             Entre em contato comigo para mais informações sobre meus serviços.
           </p>
-          <Contact />
+          <div className="flex md:gap-100 flex-wrap md:flex-nowrap mt-30">
+            <Image src='/assets/logo.svg' alt='Logomarca de Rafael Silva' width={600} height={40} />
+            <Contact />
+          </div>
+
         </section>
       </main>
     </div>
