@@ -27,8 +27,8 @@ export default function Home() {
         </div>
       </section>
       <section className='p-4'>
-        <h2 className='text-center text-2xl font-bold mt-4'>
-          Instituições e Secretarias que confiaram em Rafael Silva
+        <h2 className='text-center text-2xl font-bold mt-8 uppercase'>
+          Quem já caminhou comigo
         </h2>
         <PartnersCarousel />
       </section>
@@ -40,7 +40,7 @@ export default function Home() {
         </section>
         <section
           id='sobre'
-          className='flex flex-col items-center justify-center gap-4 min-h-dvh px-8 py-20 mt-20'>
+          className='flex flex-col items-center justify-center gap-4 min-h-dvh px-8'>
           <div className="flex flex-col md:flex-row gap-4 justify-between">
             <Bio />
             <div className="relative text-2xl">
@@ -51,7 +51,7 @@ export default function Home() {
         </section>
         <section
           id='publicacoes'
-          className='flex flex-col items-center justify-center gap-4 mt-8 min-h-dvh'>
+          className='flex flex-col items-center justify-center gap-4 mt-8'>
           <h2 className='text-2xl font-bold'>Publicações</h2>
           <p className='text-lg'>
             Aqui você encontrará minhas publicações mais recentes.
