@@ -32,6 +32,7 @@ Cursos
 - area amarela, deixar tudo escuro e card amarelo claro
 - Quem já caminhou comigo
 - Newsletter Icone da Substack
+- Area de Depoimentos de pessoas entre Newsletter e Contato
 
 Rafael
 
