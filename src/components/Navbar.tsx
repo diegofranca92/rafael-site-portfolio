@@ -42,7 +42,7 @@ export function NavBar() {
 
       {/* Barra de navegação visível no topo */}
       <div className="drawer-content flex flex-col">
-        <nav className='navbar flex justify-between items-center gap-4 px-4 bg-[#1348b4] w-full min-h-[72px]'>
+        <nav className='navbar flex justify-between items-center gap-4 px-4 bg-[#1348b4] w-full min-h-18'>
 
           {/* Identidade Visual (Logo + Textos) */}
           <div className="flex gap-4 justify-items-center items-center py-2">
