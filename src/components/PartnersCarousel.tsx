@@ -14,9 +14,8 @@ export function PartnersCarousel() {
             src={src}
             alt={index < partnerBanners.length ? 'Parceiros' : ''}
             aria-hidden={index >= partnerBanners.length}
-            width={700}
-            height={200}
-            className="h-auto w-175 shrink-0"
+            width={600}
+            height={150}
           />
         ))}
       </div>
