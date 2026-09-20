@@ -51,10 +51,10 @@ export default function Carousel() {
                 alt={`Publicação ${item.id}`}
                 width={400}
                 height={300}
-                className="w-full max-w-[400px] h-auto rounded-2xl"
+                className="w-full max-w-100 h-auto rounded-2xl"
               />
 
-              <div className="w-full md:w-auto max-w-[600px]">
+              <div className="w-full md:w-auto max-w-150">
                 <p className="max-w-150">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Quis, eum nemo reiciendis natus ducimus odio eos debitis et
