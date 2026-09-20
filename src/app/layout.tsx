@@ -1,33 +1,37 @@
 import type { Metadata } from 'next'
 import { Unbounded } from 'next/font/google'
+
 import { LinkedinCard } from '../components/LinkedinCard'
 import { NavBar } from '../components/Navbar'
+
 import './globals.css'
 
 const unbounded = Unbounded({
   variable: '--font-unbounded',
-  subsets: ['latin']
+  subsets: ['latin'],
 })
-
 
 export const metadata: Metadata = {
   title: 'Rafael Silva',
-  description: 'Professor e Palestrante'
+  description: 'Professor e Palestrante',
 }
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
     <html
-      lang='en'
+      lang="pt-BR"
       data-theme="light"
-      className={`${unbounded.variable} ${unbounded.variable} h-full antialiased relative`}>
-      <body className='min-h-full flex flex-col relative'>
+      className={`${unbounded.variable} h-full antialiased overflow-x-hidden`}
+    >
+      <body className="min-h-full flex flex-col relative overflow-x-hidden">
         <NavBar />
+
         {children}
+
         <LinkedinCard />
       </body>
     </html>

@@ -22,3 +22,20 @@ Imagens de Escolas
 Contato
 Newsletter
 Cursos
+
+- Diminuir fonte da Timeline
+- espaçamento dos parceiros e retirar o fundo das logos
+- Aumentar o espaçamento entre timeline e a Bio
+- Tirar fundo da newsletter
+- Diminui area de Contato
+- Tom de azul da Navbar em tudo
+- area amarela, deixar tudo escuro e card amarelo claro
+- Quem já caminhou comigo
+- Newsletter Icone da Substack
+- Area de Depoimentos de pessoas entre Newsletter e Contato
+
+Rafael
+
+- Imagem do Topo
+- Depoimentos de pessoas
+- Cards dos Cursos

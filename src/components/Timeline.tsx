@@ -105,7 +105,7 @@ export function Timeline() {
                       {entry.year}
                     </div>{' '}
                     -{' '}
-                    <span className="uppercase">
+                    <span className="uppercase text-sm">
                       {entry.title}
                     </span>
                   </h3>
@@ -123,7 +123,7 @@ export function Timeline() {
                       {entry.year}
                     </div>{' '}
                     -{' '}
-                    <span className="uppercase">
+                    <span className="uppercase text-sm">
                       {entry.title}
                     </span>
                   </h3>
@@ -145,10 +145,10 @@ export function Timeline() {
       {/* Botão para abrir o histórico completo */}
       {hiddenEntries.length > 0 && (
         <button
-          className="p-4 border-amber-500 hover:cursor-pointer border-2 rounded-full hover:bg-amber-600 hover:text-white transition-colors mt-8"
+          className="p-4 border-amber-500 text-sm hover:cursor-pointer border-2 rounded-full hover:bg-amber-600 hover:text-white transition-colors mt-8"
           onClick={() => modalRef.current?.showModal()}
         >
-          Mostrar Mais Histórico
+          Mostrar Mais
         </button>
       )}
 
@@ -157,9 +157,9 @@ export function Timeline() {
         ref={modalRef}
         className="modal modal-bottom sm:modal-middle"
       >
-        <div className="modal-box bg-slate-50 max-w-2xl">
+        <div className="modal-box bg-[#252525] max-w-5xl">
 
-          <h3 className="font-bold text-2xl text-blue-900 mb-6 border-b pb-2">
+          <h3 className="font-bold text-2xl mb-6 border-b pb-2">
             Histórico Completo
           </h3>
 
