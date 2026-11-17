@@ -44,7 +44,7 @@ export function Services() {
         {
           title: 'Gestão e mentoria de Grupos de Afinidade',
           description:
-            'Estruturo e mentoro grupos de afinidade para que deixem de ser apenas espaços de convivência e tornem-se instâncias estratégicas de mudança. Apoio na definição de governança, planos de ação e letramento dos integrantes.'
+            'Estruturo e mentoro grupos de afinidade para que deixem de ser apenas espaços de convivência e se tornem instâncias estratégicas de mudança. Apoio na definição de governança, planos de ação e letramento dos integrantes.'
         }
       ]
     },
@@ -61,7 +61,7 @@ export function Services() {
         {
           title: 'Cursos, workshops e palestras',
           description:
-            'a grande lacuna atual para implementação da educação antirracista é a formação docente, já executei mais de 40 palestras, workshops e trilhas de conhecimento (longas ou curtas, online e presenciais) para educadores. Atualmente, 3 secretarias já possuem cursos online de 20h e 30h voltadas exclusivamente para as dores e realidades locais.'
+            'A grande lacuna atual para implementação da educação antirracista é a formação docente, já executei mais de 40 palestras, workshops e trilhas de conhecimento (longas ou curtas, online e presenciais) para educadores. Atualmente, 3 secretarias já possuem cursos meus online de 20h e 30h voltadas exclusivamente para as dores e realidades locais.'
         }
       ]
     }

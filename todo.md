@@ -3,6 +3,8 @@
 
 - [x] Fotos LinkedIn Depoimentos
 - [ ] Área Cadastros e login
+- [ ] Alinhar fotos das publis com o Canva
+- [ ] Revisar todos os textos com o doc de Rafael de referencia
 - [ ] novas imagens Parceiros
 - [ ] completar publis com Artigos
 - [ ] Imagem pra Newsletter

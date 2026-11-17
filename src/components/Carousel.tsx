@@ -19,71 +19,71 @@ const publicacoes: Publicacao[] = [
     id: 1,
     title: 'Protocolo Antirracista — Raiz Educação',
     description:
-      'Protocolo institucional do Raiz Educação, grupo educacional que conta com 14 marcas, 45 unidades escolares e cerca de 20 mil alunos.',
+      'Protocolo institucional antirracista desenvolvido para o Raiz Educação, grupo educacional que reúne 14 marcas, 45 unidades escolares e cerca de 20 mil alunos.',
     category: 'Protocolo institucional',
     institution: 'Raiz Educação',
     src: '/assets/publicacoes/1.png',
-    alt: 'Protocolo institucional antirracista do Raiz Educação'
+    alt: 'Protocolo Antirracista do Raiz Educação'
   },
   {
     id: 2,
     title: 'Cartilha de Letramento Racial — Suzano',
     description:
-      'Cartilha de letramento racial e combate ao racismo no espaço corporativo da Suzano, em Imperatriz, Maranhão.',
+      'Cartilha de letramento racial e combate ao racismo no ambiente corporativo, desenvolvida para a Suzano, em Imperatriz, Maranhão.',
     category: 'Cartilha',
     institution: 'Suzano — Imperatriz/MA',
     src: '/assets/publicacoes/2.png',
-    alt: 'Cartilha de letramento racial e combate ao racismo da Suzano'
+    alt: 'Cartilha de Letramento Racial da Suzano'
   },
   {
     id: 3,
     title: 'Coleção Didática — Ed Saber',
     description:
-      'Coleção didática voltada para o Ensino Fundamental — Anos Iniciais, desenvolvida para promover o reconhecimento da diversidade e o respeito às diferenças, fortalecendo o pertencimento étnico-racial e a valorização das culturas africanas e indígenas.',
+      'Coleção didática voltada aos Anos Iniciais do Ensino Fundamental, desenvolvida para promover o reconhecimento da diversidade e o respeito às diferenças. O material fortalece o pertencimento étnico-racial e valoriza as culturas africanas e indígenas.',
     category: 'Material didático',
     institution: 'Ed Saber',
     src: '/assets/publicacoes/3.png',
-    alt: 'Coleção didática Ed Saber sobre diversidade e relações étnico-raciais'
+    alt: 'Coleção didática Ed Saber'
   },
   {
     id: 4,
     title: 'Livro Paradidático',
     description:
-      'Livro voltado para crianças do 2º ao 5º ano do Ensino Fundamental, que aborda conceitos da educação das relações étnico-raciais.',
+      'Livro voltado ao público infantil, especialmente estudantes do 2º ao 5º ano do Ensino Fundamental, que aborda conceitos da Educação das Relações Étnico-Raciais.',
     category: 'Livro paradidático',
     institution: 'Publicação autoral',
     src: '/assets/publicacoes/4.png',
-    alt: 'Capa do livro paradidático sobre educação das relações étnico-raciais'
+    alt: 'Livro paradidático sobre Educação das Relações Étnico-Raciais'
   },
   {
     id: 5,
     title: 'Coluna no Porvir',
     description:
-      'Coluna mensal sobre educação das relações étnico-raciais e gestão antirracista.',
-    category: 'Artigo / Coluna',
+      'Coluna mensal dedicada à educação das relações étnico-raciais e à gestão antirracista, contribuindo para o debate sobre práticas educacionais e institucionais comprometidas com a equidade racial.',
+    category: 'Coluna',
     institution: 'Porvir',
     src: '/assets/publicacoes/5.png',
-    alt: 'Publicação de coluna sobre educação antirracista no Porvir'
+    alt: 'Coluna sobre educação das relações étnico-raciais no Porvir'
   },
   {
     id: 6,
-    title: 'Artigos de opinião — Nexo Jornal',
+    title: 'Artigos de Opinião — Nexo Jornal',
     description:
-      'Contribuição em artigos de opinião sobre temáticas relacionadas à educação, à docência e às relações étnico-raciais no espaço escolar.',
+      'Contribuição em artigos de opinião sobre temas relacionados à educação, à docência e às relações étnico-raciais no espaço escolar.',
     category: 'Artigos de opinião',
     institution: 'Nexo Jornal',
     src: 'https://placehold.co/600x800',
-    alt: 'Imagem representativa dos artigos de opinião publicados no Nexo Jornal'
+    alt: 'Artigos de opinião de Rafael Silva no Nexo Jornal'
   },
   {
     id: 7,
-    title: 'Artigo de opinião — TV Cultura',
+    title: 'Artigo de Opinião — TV Cultura',
     description:
-      'Artigo de opinião sobre história e memória da população negra no Brasil.',
+      'Artigo de opinião dedicado à história e à memória da população negra no Brasil.',
     category: 'Artigo de opinião',
     institution: 'TV Cultura',
     src: 'https://placehold.co/600x800',
-    alt: 'Imagem representativa do artigo de opinião publicado na TV Cultura'
+    alt: 'Artigo de opinião sobre história e memória da população negra no Brasil na TV Cultura'
   }
 ]
 
