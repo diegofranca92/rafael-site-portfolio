@@ -1,15 +1,14 @@
-
-import { Bio } from "../components/Bio";
-import Carousel from "../components/Carousel";
-import { Contact } from "../components/Contact";
-import { Courses } from "../components/Courses";
-import { Newsletter } from "../components/Newsletter";
-import { PartnersCarousel } from "../components/PartnersCarousel";
-import { Services } from "../components/Services";
-import { Timeline } from "../components/Timeline";
+import { Bio } from '../components/Bio'
+import Carousel from '../components/Carousel'
+import { Contact } from '../components/Contact'
+import { Courses } from '../components/Courses'
+import { Newsletter } from '../components/Newsletter'
+import { PartnersCarousel } from '../components/PartnersCarousel'
+import { Services } from '../components/Services'
+import { Testimonials } from '../components/Testimonials'
+import { Timeline } from '../components/Timeline'
 
 export default function Home() {
-
   return (
     <div>
       <section
@@ -41,10 +40,13 @@ export default function Home() {
         <section
           id='sobre'
           className='flex flex-col items-center justify-center gap-4 min-h-dvh px-8'>
-          <div className="flex flex-col md:flex-row gap-4 justify-between">
+          <div className='flex flex-col md:flex-row gap-4 justify-between'>
             <Bio />
-            <div className="relative text-2xl">
-              <h3>COMO CHEGUEI <br /><span className="text-blue-700">ATÉ AQUI</span></h3>
+            <div className='relative text-2xl'>
+              <h3>
+                COMO CHEGUEI <br />
+                <span className='text-blue-700'>ATÉ AQUI</span>
+              </h3>
               <Timeline />
             </div>
           </div>
@@ -59,6 +61,7 @@ export default function Home() {
           <Carousel />
         </section>
         <Courses />
+        <Testimonials />
         <Newsletter />
         <Contact />
       </main>
