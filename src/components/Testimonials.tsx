@@ -18,7 +18,7 @@ const testimonials: Testimonial[] = [
     name: 'Cecília Melo',
     role: 'Coordenadora de Responsabilidade Social e DEI na B. Braun Group',
     linkedin: 'https://www.linkedin.com/in/maria-cec%C3%ADlia-melo-4297473b/',
-    image: '',
+    image: '/assets/depoimentos/maria-cecilia.jpeg',
     text: `Rafael Silva é um profissional extremamente didático, inteligente e profundo no conhecimento sobre Diversidade, Equidade e Inclusão. É daquelas pessoas que conseguem prender a atenção e nos fazer querer ouvir cada vez mais sobre o tema.
 
 Em nossa parceria, ele tem contribuído de forma muito significativa em rodas de conversa, palestras e debates na B. Braun, trazendo reflexões, cases e situações do cotidiano que nos ajudam a ampliar o olhar e transformar conceitos em práticas. Sua capacidade de conduzir diálogos, provocar reflexões e estimular perguntas e discussões torna cada encontro uma experiência muito rica.`
@@ -28,7 +28,7 @@ Em nossa parceria, ele tem contribuído de forma muito significativa em rodas de
     name: 'Beatriz Santa Rita',
     role: 'CEO e fundadora da Diverse Soluções',
     linkedin: 'https://www.linkedin.com/in/beatrizdiversidadeinclusao/',
-    image: '',
+    image: '/assets/depoimentos/beatriz-santa.jpeg',
     text: `Rafael é uma referência quando o tema é educação antirracista no Brasil. Seu conhecimento em história do Brasil e sua abordagem didática instigam colaboradores e lideranças a se engajar no processo de ampliar ou iniciar o seu letramento racial. Gosto muito de trabalhar com ele como parceiro dos treinamentos da Diverse!`
   },
   {
@@ -36,15 +36,15 @@ Em nossa parceria, ele tem contribuído de forma muito significativa em rodas de
     name: 'Leonardo Knittel',
     role: 'Especialista em cultura, pertencimento e bem-estar na Haleon',
     linkedin: 'https://www.linkedin.com/in/leonardoknittel/',
-    image: '',
+    image: '/assets/depoimentos/leonardo-knittel.jpeg',
     text: `Rafael conduziu com maestria um ciclo de letramento racial na empresa em que coordeno as atividades de inclusão. Sua oratória é clara e consistente, além de sempre trazer conhecimento adicional ao conteúdo pré-programado, fazendo com que questionamentos se transformem em novas pílulas de conhecimento. Tem excelente postura profissional e pessoal. Recomendo fortemente.`
   },
   {
     id: '4',
-    name: 'Daniele Santos Barbosa',
+    name: 'Danielle Santos Barbosa',
     role: 'Diretora do SESI MG',
     linkedin: 'https://www.linkedin.com/in/danielle-santos-barbosa-795014175/',
-    image: '',
+    image: '/assets/depoimentos/danielle-santos.jpeg',
     text: `Conheci Rafael Silva pelo LinkedIn e, diante da necessidade de abordar o racismo de forma responsável no ambiente escolar, convidei-o para uma formação com mais de 100 profissionais da nossa escola.
 
 A experiência foi extremamente significativa. Rafael alia sólida formação acadêmica a uma excelente capacidade de comunicação, conduzindo temas complexos com profundidade, didática, leveza e abertura ao diálogo.
@@ -56,7 +56,7 @@ O retorno da equipe foi muito positivo, especialmente pela qualidade do conteúd
     name: 'Mércia Falcini',
     role: 'Diretora Executiva da Consultoria Saberes e Secretária Adjunta de Educação de Jundiaí – SP',
     linkedin: 'https://www.linkedin.com/in/m%C3%A9rcia-falcini-332905173/',
-    image: '',
+    image: '/assets/depoimentos/mercia-falcini.jpeg',
     text: `Tenho grande admiração pelo trabalho do Rafael, que alia conhecimento e compromisso com a educação antirracista. Sua habilidade para abordar as relações étnico-raciais com professores, de forma sensível e potente, é um de seus grandes diferenciais.`
   },
   {
@@ -64,7 +64,7 @@ O retorno da equipe foi muito positivo, especialmente pela qualidade do conteúd
     name: 'Adriana Hassin',
     role: 'Diretora de Pessoas e Cultura do Raiz Educação',
     linkedin: 'https://www.linkedin.com/in/adriana-hassin-653b325a/',
-    image: '',
+    image: '/assets/depoimentos/adriana-hassin.jpeg',
     text: `Rafael alia uma escuta atenta e respeitosa dos diferentes pontos de vista à capacidade de se posicionar e transformar cada oportunidade em espaço de reflexão, educação e orientação. Em seu trabalho, demonstra compreender que, no ambiente escolar, a pauta antirracista exige letramento, consistência e investimento não apenas de estudantes, mas também dos profissionais da educação, das famílias e de toda a comunidade. Compreende, igualmente, que esses processos precisam ser conduzidos com diligência, cuidado e intencionalidade educativa, sem deixar de reconhecer que o compromisso com a pauta é inegociável.`
   }
 ]
@@ -139,7 +139,7 @@ export function Testimonials() {
           Reconhecimento
         </span>
 
-        <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mt-3'>
+        <h2 className='text-3xl md:text-4xl font-bold mt-3'>
           O que dizem sobre meu trabalho
         </h2>
 

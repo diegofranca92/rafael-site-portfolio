@@ -8,7 +8,7 @@ const courses = [
     title: 'Letramento Racial Haleon',
     description:
       'Trilha de conhecimento em parceria com a Diverse Soluções sobre relações étnico-raciais e liderança inclusiva, voltada para alta e média liderança e colaboradores.',
-    image: 'https://placehold.co/400x300',
+    image: '/assets/cursos/1.png',
     badge: 'Corporativo',
     tags: ['Letramento Racial', 'Liderança Inclusiva', 'Diversidade']
   },
@@ -16,7 +16,7 @@ const courses = [
     title: 'Letramento Racial Suzano',
     description:
       'Trilha de letramento racial e práticas antirracistas no espaço corporativo, desenvolvida para o Grupo de Afinidade Racial da Suzano, em Imperatriz/MA.',
-    image: 'https://placehold.co/400x300',
+    image: '/assets/cursos/2.png',
     badge: 'Corporativo',
     tags: ['Letramento Racial', 'Práticas Antirracistas', 'Grupos de Afinidade']
   },
@@ -24,7 +24,7 @@ const courses = [
     title: 'Educação Antirracista para Educadores de Ubatuba',
     description:
       'Curso de 30 horas com os principais conceitos da educação das relações étnico-raciais e da educação antirracista, voltado para professores da rede municipal de Ubatuba.',
-    image: 'https://placehold.co/400x300',
+    image: '/assets/cursos/3.png',
     badge: '30 horas',
     tags: ['Educação', 'Formação Docente', 'Educação Antirracista']
   },
@@ -32,7 +32,7 @@ const courses = [
     title: 'Educação Antirracista para Educadores de Santo Antônio dos Pinhais',
     description:
       'Curso de 30 horas com os principais conceitos da educação das relações étnico-raciais e da educação antirracista, voltado para professores da rede municipal de Santo Antônio dos Pinhais.',
-    image: 'https://placehold.co/400x300',
+    image: '/assets/cursos/4.png',
     badge: '30 horas',
     tags: ['Educação', 'Formação Docente', 'Educação Antirracista']
   },
@@ -40,7 +40,7 @@ const courses = [
     title: 'Trilha de Conhecimento Antirracista — Instituto Alana',
     description:
       'Trilha de conhecimento antirracista de 10 horas, voltada para letramento racial, gestão inclusiva e promoção do combate ao racismo em espaços corporativos.',
-    image: 'https://placehold.co/400x300',
+    image: '/assets/cursos/5.png',
     badge: '10 horas',
     tags: ['Letramento Racial', 'Gestão Inclusiva', 'Ambiente Corporativo']
   }
