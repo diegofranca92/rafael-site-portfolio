@@ -14,6 +14,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
   providers: [
     Credentials({
+      id: 'credentials',
       name: 'Administrador',
 
       credentials: {
@@ -28,11 +29,11 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       },
 
       async authorize(credentials) {
-        const email = process.env.ADMIN_EMAIL
+        const adminEmail = process.env.ADMIN_EMAIL
         const passwordHash = process.env.ADMIN_PASSWORD_HASH
 
         if (
-          !email ||
+          !adminEmail ||
           !passwordHash ||
           typeof credentials?.email !== 'string' ||
           typeof credentials?.password !== 'string'
@@ -42,7 +43,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
         const submittedEmail = credentials.email.trim().toLowerCase()
 
-        if (submittedEmail !== email.trim().toLowerCase()) {
+        if (submittedEmail !== adminEmail.trim().toLowerCase()) {
           return null
         }
 
@@ -58,7 +59,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         return {
           id: 'admin',
           name: 'Administrador',
-          email
+          email: adminEmail
         }
       }
     })
@@ -66,11 +67,11 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
   callbacks: {
     authorized({ auth, request }) {
-      const isAdminRoute =
+      const isAdminDashboard =
         request.nextUrl.pathname.startsWith('/admin/dashboard')
 
-      if (isAdminRoute) {
-        return !!auth
+      if (isAdminDashboard) {
+        return !!auth?.user
       }
 
       return true
