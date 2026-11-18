@@ -123,7 +123,7 @@ export default function AdminPage() {
                 disabled={isLoading}
                 aria-label={showPassword ? 'Ocultar senha' : 'Mostrar senha'}
                 aria-pressed={showPassword}
-                className='absolute right-3 top-1/2 -translate-y-1/2 text-sm font-medium text-gray-500 hover:text-gray-900 disabled:opacity-50'>
+                className='cursor-pointer absolute right-3 top-1/2 -translate-y-1/2 text-sm font-medium text-gray-500 hover:text-gray-900 disabled:opacity-50'>
                 {showPassword ? 'Ocultar' : 'Mostrar'}
               </button>
             </div>
