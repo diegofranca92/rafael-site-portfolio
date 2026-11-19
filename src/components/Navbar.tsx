@@ -52,7 +52,7 @@ export function NavBar() {
                 width={200}
                 height={40}
               />
-            </a>{' '}
+            </a>
             <span className='border-r-3 border-white py-2 h-14'></span>
             <span className='text-rotate text-2xl text-white'>
               <span>

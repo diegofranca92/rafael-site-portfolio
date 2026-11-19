@@ -1,16 +1,19 @@
-import { Bio } from '../components/Bio'
-import Carousel from '../components/Carousel'
-import { Contact } from '../components/Contact'
-import { Courses } from '../components/Courses'
-import { Newsletter } from '../components/Newsletter'
-import { PartnersCarousel } from '../components/PartnersCarousel'
-import { Services } from '../components/Services'
-import { Testimonials } from '../components/Testimonials'
-import { Timeline } from '../components/Timeline'
+import { Bio } from '@/src/components/Bio'
+import Carousel from '@/src/components/Carousel'
+import { Contact } from '@/src/components/Contact'
+import { Courses } from '@/src/components/Courses'
+import { Newsletter } from '@/src/components/Newsletter'
+import { PartnersCarousel } from '@/src/components/PartnersCarousel'
+import { Services } from '@/src/components/Services'
+import { Testimonials } from '@/src/components/Testimonials'
+import { Timeline } from '@/src/components/Timeline'
+import { PageLoader } from './PageLoader'
 
 export default function Home() {
   return (
     <div>
+      <PageLoader />
+
       <section
         id='header'
         className='flex flex-col md:flex-row items-center justify-start gap-4 p-4 md:p-8 min-h-dvh text-white'>
