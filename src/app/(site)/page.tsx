@@ -7,6 +7,7 @@ import { PartnersCarousel } from '@/src/components/PartnersCarousel'
 import { Services } from '@/src/components/Services'
 import { Testimonials } from '@/src/components/Testimonials'
 import { Timeline } from '@/src/components/Timeline'
+import { TypewriterText } from '@/src/components/TypewriterText'
 import { PageLoader } from './PageLoader'
 
 export default function Home() {
@@ -19,8 +20,15 @@ export default function Home() {
         className='flex flex-col md:flex-row items-center justify-start gap-4 p-4 md:p-8 min-h-dvh text-white'>
         <div className='md:w-[50%]'>
           <h1 className='text-6xl font-bold leading-[1.2]'>
-            Educação, gestão inclusiva e estratégia antirracista
+            <h1 className='text-6xl font-bold leading-[1.2] min-h-55'>
+              <TypewriterText
+                text='Educação, gestão inclusiva e estratégia antirracista'
+                speed={45}
+                loopDelay={10000}
+              />
+            </h1>
           </h1>
+
           <p className='text-lg mt-4'>
             Ajudo escolas, secretarias de educação e empresas a implementarem
             práticas de gestão, políticas e experiências educativas de

@@ -114,10 +114,6 @@ export default function Carousel() {
     <section
       id='publicacoes'
       className='w-full flex flex-col items-center gap-8 py-16'>
-      <div className='w-full max-w-7xl px-4'>
-        <h2 className='text-3xl md:text-4xl font-bold'>Publicações</h2>
-      </div>
-
       <div ref={carouselRef} className='carousel w-full scroll-smooth'>
         {publicacoes.map((item, index) => (
           <div
