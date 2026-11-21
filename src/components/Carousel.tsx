@@ -93,13 +93,10 @@ export default function Carousel() {
 
   const goToSlide = (index: number) => {
     const carousel = carouselRef.current
-
     if (!carousel) return
 
     const normalizedIndex = (index + publicacoes.length) % publicacoes.length
-
     const slide = carousel.children[normalizedIndex] as HTMLElement | undefined
-
     if (!slide) return
 
     carousel.scrollTo({
@@ -110,46 +107,70 @@ export default function Carousel() {
     setCurrentIndex(normalizedIndex)
   }
 
+  // Sincroniza o índice quando o usuário arrasta o slide com o dedo no celular
+  const handleScroll = () => {
+    const carousel = carouselRef.current
+    if (!carousel) return
+
+    const slideWidth = carousel.clientWidth
+    if (slideWidth === 0) return
+
+    const newIndex = Math.round(carousel.scrollLeft / slideWidth)
+    if (
+      newIndex !== currentIndex &&
+      newIndex >= 0 &&
+      newIndex < publicacoes.length
+    ) {
+      setCurrentIndex(newIndex)
+    }
+  }
+
   return (
     <section
       id='publicacoes'
-      className='w-full flex flex-col items-center gap-8 py-16'>
-      <div className='w-full max-w-7xl px-4'>
-        <h2 className='text-3xl md:text-4xl font-bold'>Publicações</h2>
-      </div>
-
-      <div ref={carouselRef} className='carousel w-full scroll-smooth'>
-        {publicacoes.map((item, index) => (
+      className='w-full flex flex-col items-center gap-6 py-12 md:py-16 overflow-hidden'>
+      {/* Container do Carrossel com Snap para toque no mobile */}
+      {/* Container do Carrossel */}
+      <div
+        ref={carouselRef}
+        onScroll={handleScroll}
+        className='flex w-full max-w-[100vw] overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-none [&::-webkit-scrollbar]:hidden'>
+        {publicacoes.map(item => (
           <div
             key={item.id}
             id={`slide${item.id}`}
-            className='carousel-item w-full'>
-            <div className='w-full max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12'>
-              <div className='w-full md:w-5/12 flex justify-center'>
-                <div className='relative w-full max-w-105 aspect-3/4'>
+            className='w-full max-w-[100vw] shrink-0 snap-center px-6 sm:px-10 box-border'>
+            <div className='w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12'>
+              {/* Imagem */}
+              <div className='w-full md:w-5/12 flex justify-center shrink-0'>
+                <div className='relative w-44 sm:w-56 md:w-full md:max-w-95 aspect-3/4'>
                   <Image
                     src={item.src}
                     alt={item.alt}
                     fill
                     unoptimized={item.src.startsWith('http')}
-                    sizes='(max-width: 768px) 90vw, 420px'
+                    sizes='(max-width: 640px) 176px, (max-width: 768px) 224px, 380px'
                     className='object-contain rounded-2xl'
                   />
                 </div>
               </div>
 
-              <div className='w-full md:w-7/12 flex flex-col items-start gap-4'>
-                <span className='badge badge-outline badge-lg'>
+              {/* Conteúdo de Texto */}
+              <div className='w-full min-w-0 max-w-full md:w-7/12 flex flex-col items-start text-left gap-3 md:gap-4'>
+                <span className='badge badge-outline badge-sm sm:badge-md md:badge-lg whitespace-normal h-auto py-1'>
                   {item.category}
                 </span>
 
-                <h3 className='text-2xl md:text-3xl font-bold'>{item.title}</h3>
+                <h3 className='w-full max-w-full text-lg sm:text-2xl md:text-3xl font-bold leading-snug whitespace-normal wrap-break-word'>
+                  {item.title}
+                </h3>
 
-                <p className='text-base md:text-lg leading-relaxed opacity-80'>
+                {/* Força quebra de linha e trava na largura disponível */}
+                <p className='w-full max-w-full text-sm sm:text-base md:text-lg leading-relaxed opacity-85 whitespace-normal wrap-break-word'>
                   {item.description}
                 </p>
 
-                <p className='text-sm font-semibold opacity-70'>
+                <p className='w-full max-w-full text-xs sm:text-sm font-semibold opacity-70 whitespace-normal wrap-break-word'>
                   {item.institution}
                 </p>
 
@@ -158,51 +179,57 @@ export default function Carousel() {
                     href={item.link}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='btn btn-primary mt-2'>
+                    className='btn btn-primary btn-sm md:btn-md mt-1'>
                     Acessar publicação
                   </a>
                 )}
-
-                <div className='flex items-center gap-4 mt-4'>
-                  <button
-                    type='button'
-                    onClick={() => goToSlide(index - 1)}
-                    className='btn btn-circle btn-outline bg-amber-50'
-                    aria-label='Publicação anterior'>
-                    ❮
-                  </button>
-
-                  <span className='text-sm tabular-nums opacity-70'>
-                    {index + 1} / {publicacoes.length}
-                  </span>
-
-                  <button
-                    type='button'
-                    onClick={() => goToSlide(index + 1)}
-                    className='btn btn-circle btn-outline bg-amber-50'
-                    aria-label='Próxima publicação'>
-                    ❯
-                  </button>
-                </div>
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      <div className='flex flex-wrap justify-center gap-2 px-4'>
-        {publicacoes.map((item, index) => (
+      {/* Controles fixos fora do slide (não pulam de altura no mobile) */}
+      <div className='flex flex-col items-center gap-4 mt-2 px-4'>
+        <div className='flex items-center gap-4'>
           <button
-            key={`indicator-${item.id}`}
             type='button'
-            onClick={() => goToSlide(index)}
-            aria-label={`Ir para publicação ${index + 1}`}
-            aria-current={currentIndex === index ? 'true' : undefined}
-            className={`btn btn-xs btn-circle ${
-              currentIndex === index ? 'btn-primary' : 'btn-outline'
-            }`}
-          />
-        ))}
+            onClick={() => goToSlide(currentIndex - 1)}
+            className='btn btn-circle btn-sm md:btn-md btn-outline bg-amber-50 hover:bg-amber-500 hover:border-amber-500 hover:text-white'
+            aria-label='Publicação anterior'>
+            ❮
+          </button>
+
+          <span className='text-sm font-medium tabular-nums opacity-75 min-w-11.25 text-center'>
+            {currentIndex + 1} / {publicacoes.length}
+          </span>
+
+          <button
+            type='button'
+            onClick={() => goToSlide(currentIndex + 1)}
+            className='btn btn-circle btn-sm md:btn-md btn-outline bg-amber-50 hover:bg-amber-500 hover:border-amber-500 hover:text-white'
+            aria-label='Próxima publicação'>
+            ❯
+          </button>
+        </div>
+
+        {/* Indicadores (bolinhas) */}
+        <div className='flex flex-wrap justify-center gap-2'>
+          {publicacoes.map((item, index) => (
+            <button
+              key={`indicator-${item.id}`}
+              type='button'
+              onClick={() => goToSlide(index)}
+              aria-label={`Ir para publicação ${index + 1}`}
+              aria-current={currentIndex === index ? 'true' : undefined}
+              className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                currentIndex === index
+                  ? 'w-6 bg-amber-500'
+                  : 'w-2.5 bg-gray-300 hover:bg-amber-300'
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   )

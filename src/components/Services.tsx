@@ -6,23 +6,23 @@ export function Services() {
   const audiences = [
     {
       title: 'PARA SUA ESCOLA',
-      subtitle: 'Educação antirracista transversal e intencional',
+      subtitle: 'Estratégias pedagógicas e de gestão antirracista',
       graphic: '/assets/grafismos/Grafismo20.png',
       services: [
         {
           title: 'Consultoria pedagógica',
           description:
-            'do que sua escola precisa para adotar uma educação antirracista transversal e intencional? Faço análise de currículo, curadoria de livros, conteúdos programáticos e ferramentas de implementação da educação das relações étnico-raciais da educação infantil ao Ensino Médio.'
+            'Do que sua escola precisa para adotar uma educação antirracista transversal e intencional? Faço análise de currículo, curadoria de livros, conteúdos programáticos e ferramentas de implementação da educação das relações étnico-raciais da educação infantil ao Ensino Médio.'
         },
         {
           title: 'Palestras e treinamento',
           description:
-            'a grande lacuna atual para implementação da educação antirracista é a formação docente, já executei mais de 40 palestras, workshops e trilhas de conhecimento (longas ou curtas, online e presenciais) para educadores.'
+            'A grande lacuna atual para implementação da educação antirracista é a formação docente, já executei mais de 40 palestras, workshops e trilhas de conhecimento (longas ou curtas, online e presenciais) para educadores.'
         },
         {
           title: 'Cartilhas e protocolos antirracistas',
           description:
-            'não sabe como agir em caso de racismo na sua escola? Qual a obrigação da escola e o que fazer para produzir letramento na comunidade escolar? Meus protocolos alcançaram mais de 50 mil estudantes.'
+            'Não sabe como agir em caso de racismo na sua escola? Qual a obrigação da escola e o que fazer para produzir letramento na comunidade escolar? Meus protocolos alcançaram mais de 50 mil estudantes'
         }
       ]
     },
@@ -34,17 +34,17 @@ export function Services() {
         {
           title: 'Consultoria',
           description:
-            'o que sua empresa precisa agora para ir ao próximo degrau da agenda de Diversidade? Fazer um diagnóstico ou um Censo de Diversidade? Elaborar ou implementar uma estratégia de equidade e inclusão? Em parceria com a Diverse Soluções, implemento consultorias sob medida para sua empresa.'
+            'O que sua empresa precisa agora para ir ao próximo degrau da agenda de Diversidade? Fazer um diagnóstico ou um Censo de Diversidade? Elaborar ou implementar uma estratégia de equidade e inclusão? Em parceria com parceiros estratégicos, implemento consultorias sob medida para sua empresa.'
         },
         {
           title: 'Treinamentos e palestras',
           description:
-            'Informação é a base para a evolução da agenda de Diversidade, equidade racial e de gênero em qualquer empresa. Minhas palestras já impactaram mais de 30 mil pessoas com NPS superior a 90. Agende já!'
+            'Informação é a base para a evolução da agenda de Diversidade, equidade racial e de gênero em qualquer empresa, minhas palestras já impactaram mais de 30 mil pessoas com NPS superior a 90. Agende já!'
         },
         {
           title: 'Gestão e mentoria de Grupos de Afinidade',
           description:
-            'Estruturo e mentoro grupos de afinidade para que deixem de ser apenas espaços de convivência e se tornem instâncias estratégicas de mudança. Apoio na definição de governança, planos de ação e letramento dos integrantes.'
+            'Estruturo e mentoro grupos de afinidade para que deixem de ser apenas espaços de convivência e tornem-se instâncias estratégicas de mudança. Apoio na definição de governança, planos de ação e letramento dos integrantes.'
         }
       ]
     },
@@ -56,7 +56,7 @@ export function Services() {
         {
           title: 'Consultoria em Gestão Estratégica VAAR/Fundeb',
           description:
-            'construo a busca pelas condicionalidades do VAAR em uma estratégia de transformação real para a rede. Apoio técnico para o desenho e implementação de políticas antirracistas, estruturação de planos de ação baseados em evidências, criação de protocolos de equidade e formação continuada para a melhoria efetiva dos processos pedagógicos e dos resultados de aprendizagem de alunos não brancos.'
+            'Construo a busca pelas condicionalidades do VAAR em uma estratégia de transformação real para a rede. Apoio técnico para o desenho e implementação de políticas antirracistas, estruturação de planos de ação baseados em evidências, criação de protocolos de equidade e formação continuada para a melhoria efetiva dos processos pedagógicos e dos resultados de aprendizagem de alunos não brancos.'
         },
         {
           title: 'Cursos, workshops e palestras',
