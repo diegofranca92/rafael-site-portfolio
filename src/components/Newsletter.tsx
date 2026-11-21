@@ -4,8 +4,8 @@ export function Newsletter() {
   return (
     <section
       id='newsletter'
-      className='flex flex-col md:flex-row items-center justify-center gap-8 mt-8 w-full rounded-2xl p-6 md:p-20'>
-      <div className='w-full flex flex-col gap-8'>
+      className='flex flex-col-reverse md:flex-row items-center justify-center gap-8 mt-8 w-full rounded-2xl p-6 md:p-20'>
+      <div className='w-full md:w-1/2 flex flex-col gap-6 md:gap-8'>
         <h2 className='text-2xl font-bold'>
           SE INSCREVA NA
           <br />

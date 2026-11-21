@@ -1,21 +1,25 @@
 'use client'
 import { useEffect, useState } from 'react'
 
-export function TypewriterText({
-  text,
-  speed = 50,
-  loopDelay = 10000
-}: {
+interface TypewriterTextProps {
   text: string
   speed?: number
   loopDelay?: number
-}) {
+  className?: string
+}
+
+export function TypewriterText({
+  text,
+  speed = 50,
+  loopDelay = 10000,
+  className = ''
+}: TypewriterTextProps) {
   const [displayedText, setDisplayedText] = useState('')
 
   useEffect(() => {
     let i = 0
-    let typingInterval: any
-    let restartTimeout: any
+    let typingInterval: ReturnType<typeof setInterval>
+    let restartTimeout: ReturnType<typeof setTimeout>
 
     const startTyping = () => {
       i = 0
@@ -27,7 +31,6 @@ export function TypewriterText({
           i++
         } else {
           clearInterval(typingInterval)
-          // Aguarda 10 segundos (loopDelay) após terminar de escrever para reiniciar
           restartTimeout = setTimeout(startTyping, loopDelay)
         }
       }, speed)
@@ -35,7 +38,6 @@ export function TypewriterText({
 
     startTyping()
 
-    // Limpa os temporizadores se o componente for desmontado
     return () => {
       clearInterval(typingInterval)
       clearTimeout(restartTimeout)
@@ -43,9 +45,17 @@ export function TypewriterText({
   }, [text, speed, loopDelay])
 
   return (
-    <span>
-      {displayedText}
-      <span className='inline-block w-1 h-[0.9em] ml-1 align-baseline bg-amber-500 animate-pulse' />
+    <span className={`relative inline-block ${className}`}>
+      {/* Texto fantasma que reserva a altura exata em qualquer tela sem causar "pulos" */}
+      <span className='invisible select-none' aria-hidden='true'>
+        {text}
+      </span>
+
+      {/* Texto animado sobreposto */}
+      <span className='absolute inset-0'>
+        {displayedText}
+        <span className='inline-block w-[0.07em] min-w-0.5 h-[0.85em] ml-1 align-baseline bg-amber-500 animate-pulse' />
+      </span>
     </span>
   )
 }

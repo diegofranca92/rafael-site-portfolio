@@ -254,7 +254,7 @@ export function Testimonials() {
             <button
               type='button'
               onClick={() => goToSlide(currentIndex - 1)}
-              className='btn btn-circle btn-outline border-gray-300 text-gray-700'
+              className='btn btn-circle btn-sm md:btn-md btn-outline bg-amber-50 hover:bg-amber-500 hover:border-amber-500 hover:text-white'
               aria-label='Depoimento anterior'>
               ❮
             </button>
@@ -262,7 +262,7 @@ export function Testimonials() {
             <button
               type='button'
               onClick={() => goToSlide(currentIndex + 1)}
-              className='btn btn-circle btn-outline border-gray-300 text-gray-700'
+              className='btn btn-circle btn-sm md:btn-md btn-outline bg-amber-50 hover:bg-amber-500 hover:border-amber-500 hover:text-white'
               aria-label='Próximo depoimento'>
               ❯
             </button>

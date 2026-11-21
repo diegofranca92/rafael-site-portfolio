@@ -55,16 +55,23 @@ body {
   position: relative;
   isolation: isolate;
 
-  background-image: url("/assets/topo.jpg");
+  background-image: url('/assets/topo.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll; /* Evita o zoom bugado no celular */
   background-color: #e1bb3f;
 }
 
+/* Ativa o efeito parallax (fixed) apenas em telas maiores */
+@media (min-width: 768px) {
+  #header {
+    background-attachment: fixed;
+  }
+}
+
 #header::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
@@ -85,9 +92,7 @@ body {
   animation: scroll-left 80s linear infinite;
 }
 
-
 /* Loading Animation */
-
 
 .loading-logo {
   animation: loading-logo-in 1.2s ease-out forwards;
