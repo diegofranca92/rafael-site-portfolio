@@ -21,7 +21,6 @@ export default function AdminRootLayout({
   return (
     <html
       lang='pt-BR'
-      data-theme='light'
       className={`${unbounded.variable} h-full antialiased overflow-x-hidden`}>
       <body className='min-h-full flex flex-col relative overflow-x-hidden'>
         {children}

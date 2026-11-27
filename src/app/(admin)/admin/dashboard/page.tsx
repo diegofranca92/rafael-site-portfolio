@@ -7,19 +7,19 @@ const sections = [
     title: 'Cursos',
     description: 'Cadastre e gerencie os cursos disponíveis no site.',
     icon: '📚',
-    href: '#cursos'
+    href: '/admin/dashboard/cursos'
   },
   {
     title: 'Publicações',
     description: 'Gerencie artigos, imagens e publicações.',
     icon: '📰',
-    href: '#publicacoes'
+    href: '/admin/dashboard/publicacoes'
   },
   {
     title: 'Depoimentos',
     description: 'Adicione e organize os depoimentos recebidos.',
     icon: '💬',
-    href: '#depoimentos'
+    href: '/admin/dashboard/depoimentos'
   }
 ]
 

@@ -307,7 +307,7 @@ export function PublicationsManager({ initialPublications }: Props) {
                 />
 
                 {form.image && (
-                  <div className='mt-2 rounded-xl overflow-hidden border border-base-300 max-w-xs'>
+                  <div className='mt-2 rounded-xl overflow-hidden border max-w-xs'>
                     {/* Preview da imagem */}
                     <img
                       src={form.image}
@@ -413,7 +413,7 @@ export function PublicationsManager({ initialPublications }: Props) {
 
             <h3 className='font-bold text-lg'>Nenhuma publicação cadastrada</h3>
 
-            <p className='text-base-content/60'>
+            <p className='text-content/60'>
               Comece adicionando sua primeira publicação.
             </p>
 
